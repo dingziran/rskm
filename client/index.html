@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="goal">
+  <head>
+    <title>Goal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="plugins/kendoui/kendo.common.min.css"  />
+    <link rel="stylesheet" href="plugins/kendoui/kendo.default.min.css"  />
+    <link rel="stylesheet" href="plugins/kendoui/kendo.dataviz.min.css"  />
+
+    <link rel="stylesheet" href="/app.css"/>
+  </head>
+  <body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Goal</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a ui-sref='home' href="#">Home</a></li>
+          <li ui-sref-active="active"><a ui-sref='statistic' href="#">Statistic</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manage <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active"><a ui-sref='project'href="#">Projects</a></li>
+              <li ui-sref-active="active"><a ui-sref='skill'href="#">Skills</a></li>
+              <li ui-sref-active="active"><a ui-sref='purpose'href="#">Purposes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container" ui-view>
+  </div>
+
+
+
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.js"></script>
+  <script src="plugins/angular/angular.js"></script>
+  <script src="plugins/kendoui/kendo.all.min.js"></script>
+  <script src="plugins/angular/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+  <script src="service/mongodb.js"></script>
+  <script src="app/home/home.js"></script>
+  <script src="app/project/project.js"></script>
+  <script src="app/purpose/purpose.js"></script>
+  <script src="app/skill/skill.js"></script>
+  <script src="app/statistic/statistic.js"></script>
+  </body>
+</html>
